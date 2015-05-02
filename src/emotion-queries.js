@@ -1,6 +1,8 @@
 var that = this;
 
-this.findEmotions = function ( options ) {
+this.__emotions = {};
+
+this.__emotions.findEmotion = function ( options ) {
   var resultSet = [];
   
   for ( var i = 0; i < that.__emotions_data.length; i++ ) {
@@ -22,7 +24,7 @@ this.findEmotions = function ( options ) {
   return resultSet;
 };
 
-this.getParent = function ( emotion ) {
+this.__emotions.getParent = function ( emotion ) {
   var result = null;
   
   if ( emotion.parent ) {
@@ -36,4 +38,17 @@ this.getParent = function ( emotion ) {
   }
   
   return result;
+}
+
+/**
+ * Will not look for circular loops.  Assumes directed, non-cyclical graph.
+ */
+this.__emotions.getAncestor = function ( emotion ) {
+  var e = emotion;
+  
+  while ( e.parent !== null ) {
+    e = that.__emotions.getParent( e );
+  }
+  
+  return e;
 }
