@@ -14,7 +14,7 @@ this._emotions_data = [
   {
     slug : 'indifferent',
     readible : 'Indifferent',
-    parent 'bored',
+    parent : 'bored',
     tier : 2
   },
   {
@@ -82,11 +82,148 @@ this._emotions_data = [
     readible : 'Surprised',
     parent : null,
     tier : 0
-  }
+  },
   {
     slug : 'startled',
     readible : 'Startled',
-    parent : 'suprised',
+    parent : 'surprised',
     tier : 1
+  },
+  {
+    slug : 'shocked',
+    readible : 'Shocked',
+    parent : 'startled',
+    tier : 2
+  },
+  {
+    slug : 'dismayed',
+    readible : 'Dismayed',
+    parent : 'startled',
+    tier : 2
+  },
+  {
+    slug : 'confused',
+    readible : 'Confused',
+    parent : 'surprised',
+    tier : 1
+  },
+  {
+    slug : 'disillusioned',
+    readible : 'Disillusioned',
+    parent : 'confused',
+    tier : 2
+  },
+  {
+    slug : 'perplexed',
+    readible : 'Perplexed',
+    parent : 'confused',
+    tier : 2
+  },
+  {
+    slug : 'amazed',
+    readible : 'Amazed',
+    parent : 'surprised',
+    tier : 1
+  },
+  {
+    slug : 'astonished',
+    readible : 'Astonished',
+    parent : 'amazed',
+    tier : 2
+  },
+  {
+    slug : 'awe',
+    readible : 'Awe',
+    parent : 'amazed',
+    tier : 2
+  },
+  {
+    slug : 'excited',
+    readible : 'Excited',
+    parent : 'surprised',
+    tier : 1
+  },
+  {
+    slug : 'eager',
+    readible : 'Eager',
+    parent : 'excited',
+    tier : 2
+  },
+  {
+    slug : 'energetic',
+    readible : 'Energetic',
+    parent : 'excited',
+    tier : 2
+  },
+  {
+    slug : 'happy',
+    readible : 'Happy',
+    parent : null,
+    tier : 0
+  },
+  {
+    slug : 'playful',
+    readible : 'Playful',
+    parent : 'happy',
+    tier : 1
+  },
+  {
+    slug : 'aroused',
+    readible : 'Aroused',
+    parent : 'playful',
+    tier : 2
+  }, {
+    slug : 'cheeky',
+    readible : 'Cheeky',
+    parent : 'playful',
+    tier : 2
+  },
+  {
+    slug : 'content',
+    readible : 'Content',
+    parent : 'happy',
+    tier : 1
+  },
+  {
+    slug : 'free',
+    readible : 'Free',
+    parent : 'content',
+    tier : 2
+  },
+  {
+    slug : 'joyful',
+    readible : 'Joyful',
+    parent : 'content',
+    tier : 2
+  },
+  {
+    slug : 'interested',
+    readible : 'Interested',
+    parent : 'happy',
+    tier : 1
+  },
+  {
+    slug : 'curious',
+    readible : 'Curious',
+    parent : 'interested',
+    tier : 2
+  },
+  {
+    slug : 'inquisitive',
+    readible : 'Inquisitive',
+    parent : 'interested',
+    tier : 2
+  },
+  {
+    slug : 'proud',
+    readible : 'Proud',
+    parent : 'happy',
+    tier : 1
+  },
+  {
+    slug : 'successful',
+    readible : 'Successful',
+    parent : 'proud',
+    tier : 2
   }
 ];

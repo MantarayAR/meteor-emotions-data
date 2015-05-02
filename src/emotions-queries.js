@@ -2,7 +2,20 @@ var that = this;
 
 this.__emotions = {};
 
+/**
+ * Find an emotion based on some criteria.  You can pass in
+ * an object with any of the following properties set:
+ * - slug String
+ * - readible String
+ * - tier Number
+ * - parent String
+ *
+ * @param Object options
+ * @return Object|null
+ */
 this.__emotions.findEmotion = function ( options ) {
+  // TODO validate options
+
   var resultSet = [];
   
   for ( var i = 0; i < that.__emotions_data.length; i++ ) {
