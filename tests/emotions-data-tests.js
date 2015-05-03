@@ -5,7 +5,7 @@ Tinytest.add( 'Emotions should exist', function ( test ) {
   test.equal( typeof this._emotions_data, 'object' );
 } );
 
-Tinytest.add( 'All emotions should have slug, readible, parent, and tier', function ( test ) {
+Tinytest.add( 'All emotions should have a slug, readible, parent, and tier property', function ( test ) {
   for ( var i = 0; i < this._emotions_data.length; i++ ) {
     var emotion = this._emotions_data[i];
 
@@ -66,5 +66,8 @@ Tinytest.add( 'All emotions accurately represent their tiers', function ( test )
 
     test.equal( tier, emotion.tier, '"' + emotion.parent + '" does not accurately represent its tier.' );
   }
+} );
 
+Tinytest.add( 'There should be 130 emotions', function ( test ) {
+  test.equal( this._emotions_data.length, 130 );
 } );
