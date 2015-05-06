@@ -4,6 +4,11 @@ if ( Meteor.isServer ) {
     test.equal( typeof this.emotions.data, 'object' );
   } );
 
+  Tinytest.add( 'Emotions should be loaded in', function ( test ) {
+    this.emotions.loadData();
+    test.equal( typeof this.emotions.data, 'object' );
+  } );
+
   Tinytest.add( 'All emotions should have a slug, readible, parent, and tier property', function ( test ) {
     for ( var i = 0; i < this.emotions.data.length; i++ ) {
       var emotion = this.emotions.data[i];

@@ -12,6 +12,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
+  api.addFiles('../data/emotions-data.json', 'server');
   api.addFiles('../src/emotions-data.js');
   api.addFiles('../src/emotions-queries.js');
 });
