@@ -1,7 +1,5 @@
 var that = this;
 
-this.__emotions = {};
-
 /**
  * Find an emotion based on some criteria.  You can pass in
  * an object with any of the following properties set:
@@ -13,13 +11,13 @@ this.__emotions = {};
  * @param Object options
  * @return Object|null
  */
-this.__emotions.findEmotion = function ( options ) {
+this.emotions.findEmotion = function ( options ) {
   // TODO validate options
 
   var resultSet = [];
   
-  for ( var i = 0; i < that.__emotions_data.length; i++ ) {
-    var emotion = that.__emotions_data[i];
+  for ( var i = 0; i < that.emotions.data.length; i++ ) {
+    var emotion = that.emotions.data[i];
     var add = true;
     
     for ( var o in options ) {
@@ -37,12 +35,12 @@ this.__emotions.findEmotion = function ( options ) {
   return resultSet;
 };
 
-this.__emotions.getParent = function ( emotion ) {
+this.emotions.getParent = function ( emotion ) {
   var result = null;
   
   if ( emotion.parent ) {
-    for ( var i = 0; i < that.__emotions_data.length; i++ ) {
-      var e = that.__emotions_data[i];
+    for ( var i = 0; i < that.emotions.data.length; i++ ) {
+      var e = that.emotions.data[i];
       
       if ( emotion.parent === e.slug ) {
         return e;
@@ -56,11 +54,11 @@ this.__emotions.getParent = function ( emotion ) {
 /**
  * Will not look for circular loops.  Assumes directed, non-cyclical graph.
  */
-this.__emotions.getAncestor = function ( emotion ) {
+this.emotions.getAncestor = function ( emotion ) {
   var e = emotion;
   
   while ( e.parent !== null ) {
-    e = that.__emotions.getParent( e );
+    e = that.emotions.getParent( e );
   }
   
   return e;
