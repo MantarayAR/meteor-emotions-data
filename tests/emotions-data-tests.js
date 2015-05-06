@@ -5,7 +5,7 @@ if ( Meteor.isServer ) {
   } );
 
   Tinytest.add( 'Emotions should be loaded in', function ( test ) {
-    this.emotions.loadData();
+    this.emotions.load();
     test.equal( typeof this.emotions.data, 'object' );
   } );
 

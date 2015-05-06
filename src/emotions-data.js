@@ -3,11 +3,11 @@ if ( Meteor.isServer ) {
   that.emotions = {};
   that.emotions.data = [];
 
-  that.emotions.loadData = function () {
+  that.emotions.load = function () {
     that.emotions.data = JSON.parse( Assets.getText( '../data/emotions-data.json' ) );
   }
 
-  that.emotions.unloadData = function () {
+  that.emotions.unload = function () {
     that.emotions.data = [];
   }
 }
